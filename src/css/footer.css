@@ -1,0 +1,98 @@
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 100px;
+    row-gap: 40px;
+    padding: 100px;
+
+    background-color: var(--background-modalcontrol);
+    border-radius: 40px;
+
+    color: var(--dark-text-inverse);
+
+    @media (max-width: 1200px) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    @media (max-width: 980px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    @media (max-width: 580px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.footer__motto {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 125%;
+
+    span {
+        font-style: italic;
+        color: var(--dark-text-accent);
+    }
+}
+
+.contact {
+    grid-row: span 2;
+    color: var(--dark-text-inverse);
+    padding-top: 30px;
+
+    h3 {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 980px) {
+        grid-row: span 1;
+        order: 3;
+    }
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+
+    &:hover {
+        border-color: var(--dark-text-inverse);
+    }
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--dark-border-inverse);
+    border-radius: 100%;
+
+    svg {
+        stroke: var(--dark-text-inverse);
+    }
+
+    &:hover {
+        background-color: var(--dark-text-inverse);
+        border-color: var(--dark-text-inverse);;
+    }
+
+    &:hover svg {
+        stroke: var(--primary)
+    }
+}

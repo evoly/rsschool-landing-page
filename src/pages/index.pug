@@ -3,13 +3,21 @@ extends ../pug/layout
 block head
 
 block content
-  //- +header('index')
+  +header('index')
 
   main
-    h1 Hello there
+    section.container
+      .hero
+        img(src="images/img-hero.png", alt="hero banner").hero__img
+        .hero__content
+          h1.hero__header <span> Enjoy </span> premium coffee at our charming cafe
+          p.medium.hero__text With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+          a(href="#").hero__button
+            span Menu
+            img(src="images/coffee-cup.svg", alt="menu icon")
 
-  //-  +footer#footer
 
+  +footer#footer.container
 
 
 
