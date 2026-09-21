@@ -1,0 +1,16 @@
+{
+  "name": "rsschool-landing-page",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-pug": "^2.0.1",
+    "vite": "^8.0.12"
+  }
+}
