@@ -1,0 +1,27 @@
+:root {
+    --font-family: "Inter", sans-serif;
+    --font-size-base: 10px;
+
+
+    --primary: #403F3D;
+    --dark-text-primary: #E1D4C9;
+    --dark-text-inverse: #E1D4C9;
+    --dark-text-accent: #B0907A;
+    --dark-bg-page: #292826;
+    --dark-bg-container: #403F3D;
+    --dark-bg-overlay: #292826CC;
+    --dark-border-primary: #665F55;
+    --dark-border-inverse: #C1B6AD;
+    --background-modal: #E1D4C9;
+    --background-modalcontrol: #665F55;
+    --dark-bg-modal: var(--dark-bg-container);
+    --dark-bg-modal-control: var(--dark-bg-page);
+}
+
+.dark-border-primary {
+    border-color: var(--dark-border-primary);
+}
+
+.dark-border-inverse {
+    border-color: var(--dark-border-inverse);
+}
