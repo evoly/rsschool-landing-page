@@ -12,5 +12,8 @@
   "devDependencies": {
     "@vituum/vite-plugin-pug": "^2.0.1",
     "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
   }
 }
