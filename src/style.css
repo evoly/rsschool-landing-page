@@ -94,12 +94,21 @@ h3 {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 150%;
+
+  @media (max-width: 380px) {
+    font-size: 3.2rem;
+    line-height: 125%;
+  }
 }
 
 .burger-link {
   font-size: 3.2rem;
   font-weight: 600;
   line-height: 125%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .container {
@@ -125,6 +134,7 @@ h3 {
   @media (max-width: 770px) {
     padding-left: 60px;
   }
+
   @media (max-width: 380px) {
     padding: 60px 16px 60px 16px;
   }
@@ -257,6 +267,7 @@ h3 {
     flex-wrap: wrap;
     margin-bottom: 100px;
   }
+
   @media (max-width: 380px) {
     flex-wrap: wrap;
     margin-bottom: 30px;
@@ -286,6 +297,7 @@ h3 {
   @media (max-width: 930px) {
     margin-left: 25px;
   }
+
   @media (max-width: 380px) {
     margin-left: 0;
   }
