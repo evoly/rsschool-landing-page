@@ -3,6 +3,7 @@
 @import "css/font.css";
 @import "css/header.css";
 @import "css/footer.css";
+@import "css/slider.css";
 
 html {
   font-size: var(--font-size-base);
@@ -19,10 +20,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font-family);
   font-size: 1.6rem;
-
   background-color: var(--dark-text-inverse);
-
-
 }
 
 p {
@@ -46,6 +44,7 @@ img {
 
 .text-accent {
   font-style: italic;
+  color: var(--dark-text-accent);
 }
 
 h1 {
@@ -53,12 +52,22 @@ h1 {
   font-weight: 600;
   line-height: 105%;
   margin: 0;
+
+  @media (max-width: 380px) {
+    font-size: 4.2rem;
+    line-height: 115%;
+  }
 }
 
 h2 {
   font-size: 6rem;
   font-weight: 600;
   line-height: 125%;
+  margin: 0;
+
+  @media (max-width: 380px) {
+    font-size: 3.2rem;
+  }
 }
 
 h3 {
@@ -75,6 +84,7 @@ h3 {
 }
 
 .caption {
+  font-size: 1rem;
   font-weight: 600;
   line-height: 140%;
 }
@@ -99,8 +109,8 @@ h3 {
   padding-left: 40px;
 
   @media (max-width: 580px) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -108,11 +118,16 @@ h3 {
   position: relative;
   z-index: 2;
   padding: 100px 98px 100px 100px;
+  margin-bottom: 100px;
   overflow: hidden;
   border-radius: 40px;
-        @media (max-width: 770px) {
-            padding-left: 60px;
-          }
+
+  @media (max-width: 770px) {
+    padding-left: 60px;
+  }
+  @media (max-width: 380px) {
+    padding: 60px 16px 60px 16px;
+  }
 }
 
 .hero__content {
@@ -152,26 +167,23 @@ h3 {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: min-content;
   background-color: var(--dark-text-inverse);
-  padding: 20px 78px;
+  padding: 20px 90px 20px 65px;
   border-radius: 100px;
   border: none;
   transition: var(--transition);
-  margin-top: 4px;
 
   img {
-    
     position: absolute;
     top: 50%;
-    right: 20px;
     transform: translateY(-50%);
-    right: 50px;
-    padding-bottom: 3px;
+    right: 65px;
 
-      @media (min-width: 770px) {
-          display: none;
-        }
+    @media (min-width: 770px) {
+      display: none;
+    }
   }
 
   @media (min-width: 770px) {
@@ -179,6 +191,133 @@ h3 {
       display: block;
     }
   }
+}
 
+.section-slider,
+.section-about {
+  margin-bottom: 100px;
+}
 
+.section-slider__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-about__header {
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  gap: 40px;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+}
+
+.gallery__col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.gallery__img {
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.hidden-sm {
+  @media (max-width: 930px) {
+    display: none;
+  }
+}
+
+.section-app {
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+  margin-bottom: 95px;
+
+  @media (max-width: 1300px) {
+    column-gap: 100px;
+  }
+
+  @media (max-width: 930px) {
+    flex-wrap: wrap;
+  }
+}
+
+.section-app__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 930px) {
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 380px) {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+}
+
+.section-app__text {
+  line-height: 150%;
+}
+
+.section-app__links {
+  display: flex;
+  gap: 20px;
+  align-self: flex-start;
+
+  @media (max-width: 380px) {
+    flex-wrap: wrap;
+  }
+}
+
+.section-app__img {
+  @media (min-width: 1200px) {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 930px) {
+    margin-left: 25px;
+  }
+  @media (max-width: 380px) {
+    margin-left: 0;
+  }
+
+}
+
+.button-market {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 200px;
+  max-width: max-content;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  background-color: transparent;
+  transition: var(--transition);
+  border-radius: 100px;
+  border: 1px solid var(--background-modalcontrol);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-modalcontrol);
+    color: var(--dark-text-inverse);
+
+    svg {
+      fill: var(--dark-text-inverse);
+    }
+
+  }
+}
+
+.button-market__icon svg {
+  fill: var(--primary);
 }

@@ -1,0 +1,21 @@
+mixin slider
+    .slider&attributes(attributes)
+        .slider__button_left.slider__button
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 12H6M12 18L6 12L12 6" stroke="" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        .slider__content
+            .slider__item.item
+                img(src="images/coffee-slider-1.png", alt="coffee").item__img
+                h3.item__name S’mores Frappuccino
+                p.item-descr This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+                p.item__price $5.50        
+            
+        .slider__button_right.slider__button
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 12H6M12 18L6 12L12 6" stroke="" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        .slider__controls
+            .slider__control.active
+                <svg width="40" height="4" viewBox="0 0 40 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="4" rx="2" fill=""/></svg>
+            .slider__control
+                <svg width="40" height="4" viewBox="0 0 40 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="4" rx="2" fill=""/></svg>
+            .slider__control
+                <svg width="40" height="4" viewBox="0 0 40 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="4" rx="2" fill=""/></svg>
