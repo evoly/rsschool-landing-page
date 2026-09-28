@@ -10,10 +10,5 @@ export default {
   server: {
     open: true,
   },
-  rollupOptions: {
-    output: {
-      entryFileNames: 'assets/main-DusVq9nQ.js',
-      assetFileNames: 'assets/main-1sxEUpAq.css',
-    }
-  }
+  base: '/rsschool-landing-page/',
 }
