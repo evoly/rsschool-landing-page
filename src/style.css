@@ -4,6 +4,7 @@
 @import "css/header.css";
 @import "css/footer.css";
 @import "css/slider.css";
+@import "css/card.css";
 
 html {
   font-size: var(--font-size-base);
@@ -53,6 +54,11 @@ h1 {
   line-height: 105%;
   margin: 0;
 
+  span {
+    color: var(--dark-text-accent);
+    font-style: italic;
+  }
+
   @media (max-width: 380px) {
     font-size: 4.2rem;
     line-height: 115%;
@@ -95,7 +101,7 @@ h3 {
   font-weight: 600;
   line-height: 150%;
 
-  @media (max-width: 380px) {
+  @media (max-width: 768px) {
     font-size: 3.2rem;
     line-height: 125%;
   }
@@ -332,4 +338,98 @@ h3 {
 
 .button-market__icon svg {
   fill: var(--primary);
+}
+
+
+/*menu*/
+
+.menu {
+  padding-bottom: 100px;
+}
+
+.menu__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 6rem;
+  margin-bottom: 40px;
+  line-height: 125%;
+}
+
+.menu__controls {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.menu__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid var(--dark-border-inverse);
+  border-radius: 100px;
+  padding: 8px;
+  font-weight: inherit; 
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-modalcontrol);
+    color: var(--dark-text-inverse);
+    .menu__button-icon {
+      background-color: var(--dark-text-inverse);      
+    }
+  }
+}
+.menu__button.active {
+    background-color: var(--background-modalcontrol);
+    color: var(--dark-text-inverse);
+    cursor: default;
+    
+      .menu__button-icon {
+        background-color: var(--dark-text-inverse);
+      }
+}
+
+.menu__button-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--dark-border-inverse);
+  transition: var(--transition);
+}
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+.menu__show-more {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--primary);
+  background-color: transparent;
+  border-radius: 100%;
+  margin: 0 auto;
+
+
+  &.show {
+    display: flex;
+  }
 }

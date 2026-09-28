@@ -1,0 +1,58 @@
+extends ../pug/layout
+
+block head
+
+block content
+  +header()
+
+  main.menu.container
+      h1.menu__header Behind each of our cups hides an <span>amazing surprise</span>
+
+      .menu__controls.link-button
+        button.menu__button.active(
+          type="button"
+          data-category="coffee"
+        )
+          .menu__button-icon
+            img(
+              src="images/coffee.png"
+              alt="coffee icon"
+              width="16"
+              height="16"
+            )
+          span Coffee
+
+        button.menu__button(
+          type="button"
+          data-category="tea"
+        )
+          .menu__button-icon
+            img(
+              src="images/tea.png"
+              alt="tea icon"
+              width="16"
+              height="16"
+            )
+          span Tea
+
+        button.menu__button(
+          type="button"
+          data-category="dessert"
+        )
+          .menu__button-icon
+            img(
+              src="images/dessert.png"
+              alt="dessert icon"
+              width="16"
+              height="16"
+            )
+          span Dessert
+
+      .menu__list
+      button.menu__show-more
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+  +footer#footer.container
+
+
+
