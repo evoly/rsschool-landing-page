@@ -12,6 +12,13 @@ html {
   scrollbar-gutter: stable;
 }
 
+html[data-theme="dark"] {
+  --dark-text-inverse: #292826;
+  --dark-border-inverse: #E1D4C9;
+  --primary: #E1D4C9;
+  color: #E1D4C9;
+}
+
 body {
   min-height: 100vh;
   display: grid;
@@ -53,7 +60,7 @@ h1 {
   font-weight: 600;
   line-height: 105%;
   margin: 0;
-
+  
   span {
     color: var(--dark-text-accent);
     font-style: italic;
@@ -167,7 +174,7 @@ h3 {
 }
 
 .hero__header {
-  color: var(--dark-text-inverse);
+  color: #E1D4C9;
 
   span {
     color: var(--dark-text-accent);
@@ -176,7 +183,7 @@ h3 {
 }
 
 .hero__text {
-  color: var(--dark-text-inverse);
+  color: #E1D4C9;
 }
 
 .hero__button {

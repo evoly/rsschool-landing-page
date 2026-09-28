@@ -1,39 +1,22 @@
-import './style.css'
+import './style.css';
 
-const button = document.querySelector('.burger__menu');
-const nav = document.querySelector('nav');
-const navLinks = nav.querySelectorAll('.nav-list__item');
-const logo = document.querySelector('.logo');
-const body = document.querySelector('body');
+const themeButtons = document.querySelectorAll('.theme-switcher__button');
 
-const classToggle = () => {
-    button.classList.toggle('open');
-    nav.classList.toggle('active');
-    body.classList.toggle('overflow-hidden');
+const setTheme = (theme) => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
 };
 
-const menuHandler = () => {
+themeButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        classToggle();
+        const theme = button.classList.contains('theme-switcher--dark')
+            ? 'dark'
+            : 'light';
+
+        setTheme(theme);
     });
+});
 
-    [...navLinks, logo].forEach((link) => link.addEventListener('click', (event) => {
-        if (event.currentTarget.classList.contains('active')) {
-            event.preventDefault();
-            return;
-        }
+const savedTheme = localStorage.getItem('theme') || 'light';
 
-        if (nav.classList.contains('active')) {            
-            const href = event.currentTarget.href;
-            event.preventDefault();
-            classToggle();
-
-            setTimeout(() => {
-                window.location.href = href;
-            }, 300);
-
-        }        
-    }));
-};
-
-menuHandler();
+setTheme(savedTheme);
