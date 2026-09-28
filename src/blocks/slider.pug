@@ -1,15 +1,29 @@
 mixin slider
     .slider&attributes(attributes)
-        .slider__button_left.slider__button
+        .slider__button_left.slider__button(data-slider="arrow-left")
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 12H6M12 18L6 12L12 6" stroke="" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        .slider__content
-            .slider__item.item
-                img(src="images/coffee-slider-1.png", alt="coffee").item__img
-                h3.item__name S’mores Frappuccino
-                p.item-descr This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
-                p.item__price $5.50        
+        .slider__viewport
+            .slider__content
+                .slider__item
+                    .item
+                        img(src="images/coffee-slider-1.png", alt="coffee").item__img
+                        h3.item__name S’mores Frappuccino
+                        p.item-descr This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+                        p.item__price $5.50
+                .slider__item
+                    .item
+                        img(src="images/coffee-slider-2.png", alt="coffee").item__img
+                        h3.item__name Caramel Macchiato
+                        p.item-descr Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+                        p.item__price $5.00 
+                .slider__item
+                    .item
+                        img(src="images/coffee-slider-3.png", alt="coffee").item__img
+                        h3.item__name Ice coffee
+                        p.item-descr A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+                        p.item__price $5.50         
             
-        .slider__button_right.slider__button
+        .slider__button_right.slider__button(data-slider="arrow-right")
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 12H6M12 18L6 12L12 6" stroke="" stroke-linecap="round" stroke-linejoin="round"/></svg>
 
         .slider__controls

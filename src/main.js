@@ -1,7 +1,7 @@
 import './style.css';
 import renderCards from './js/render.js';
 import menuHandler from './js/mobileMenu.js';
-// import sliderHandler from './js/slider.js';
+import sliderHandler from './js/slider.js';
 
 const themeButtons = document.querySelectorAll('.theme-switcher__button');
 
@@ -42,7 +42,7 @@ const regex = /(?<=\/)([^/]+)(?=\.html)/g;
 const pageName = window.location.pathname.includes('.html') ? window.location.pathname.match(regex)[0] : 'index';
 
 const router = {
-    index: () => { },
+    index: () => { sliderHandler() },
     menu: () => {  renderCards(); }
 };
 
