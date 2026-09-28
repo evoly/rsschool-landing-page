@@ -34,10 +34,15 @@ export default () => {
             setTimeout(() => {
                 window.location.href = href;
             }, 300);
-
         }
     }));
 };
+
+window.addEventListener('keyup', (event) => {
+    if (event.key === 'Escape') {
+        closeMenu();
+    }
+});
 
 desktopWidth.addEventListener('change', (event) => {
     if (event.matches) {
