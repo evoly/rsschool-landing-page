@@ -173,7 +173,6 @@
         top: 0px;
         transition: var(--transition);
     }
-
 }
 
 .header__theme {
@@ -204,8 +203,6 @@
 
     }
 }
-
-
 
 .theme-switcher__button {
     width: 44px;
@@ -240,6 +237,10 @@
 
     @media (max-width: 868px) {
         margin-left: 15px;
+    }
+
+    &.mobile {
+        display: none;
     }
 
     @media (max-width: 770px) {
