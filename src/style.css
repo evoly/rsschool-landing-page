@@ -5,6 +5,7 @@
 @import "css/footer.css";
 @import "css/slider.css";
 @import "css/card.css";
+@import "css/modal.css";
 
 html {
   font-size: var(--font-size-base);
@@ -434,7 +435,7 @@ h3 {
   background-color: transparent;
   border-radius: 100%;
   margin: 0 auto;
-
+  cursor: pointer;
 
   &.show {
     display: flex;

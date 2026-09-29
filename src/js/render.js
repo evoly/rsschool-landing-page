@@ -1,4 +1,5 @@
 import cards from './menu.json';
+import renderModal from './modal.js'
 
 const createEl = (el, props = {}) => Object.assign(document.createElement(el), props);
 const container = document.querySelector('.menu__list');
@@ -23,32 +24,16 @@ export const createCard = (data, modal = false) => {
     content.append(header, info, price);
     card.append(img, content);
 
-    /*
-    if (modal) {
-        return [card, info];
-    }
-
     card.addEventListener('click', ({ target }) => {
         const item = target.closest('.card');
         const cardName = item.querySelector('.card__header').textContent;
         renderModal(cardName);
     });
-*/
+
     return card;
 };
 
 const render = () => {
-    let data;
-    /*
-    
-    const values = Object.values(categoryClass);
-    if (!values.includes(category)) {
-        data = cards;
-    } else {
-        const key = Object.entries(categoryClass).find(([, val]) => val === category)[0];
-        data = cards.filter((item) => item.category === key);
-    }
-        */
     const categoryCards = cards.filter((item) => item.category === currentCategory);
     const isMobile = mobileWidth.matches;
     const visibleCards = isMobile && !isExpanded ? categoryCards.slice(0, 4) : categoryCards;
@@ -77,8 +62,6 @@ if (showMoreButton) {
         render();
     });
 }
-
-
 
 export default (category = 'coffee') => {
     isExpanded = false;

@@ -2,6 +2,7 @@ import './style.css';
 import renderCards from './js/render.js';
 import menuHandler from './js/mobileMenu.js';
 import sliderHandler from './js/slider.js';
+import createModal from './js/modal.js';
 
 const themeButtons = document.querySelectorAll('.theme-switcher__button');
 
