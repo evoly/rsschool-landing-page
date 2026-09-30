@@ -61,7 +61,7 @@ h1 {
   font-weight: 600;
   line-height: 105%;
   margin: 0;
-  
+
   span {
     color: var(--dark-text-accent);
     font-style: italic;
@@ -108,11 +108,6 @@ h3 {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 150%;
-
-  @media (max-width: 768px) {
-    font-size: 3.2rem;
-    line-height: 125%;
-  }
 }
 
 .burger-link {
@@ -379,25 +374,27 @@ h3 {
   border: 1px solid var(--dark-border-inverse);
   border-radius: 100px;
   padding: 8px;
-  font-weight: inherit; 
+  font-weight: inherit;
   cursor: pointer;
 
   &:hover {
     background-color: var(--background-modalcontrol);
     color: var(--dark-text-inverse);
+
     .menu__button-icon {
-      background-color: var(--dark-text-inverse);      
+      background-color: var(--dark-text-inverse);
     }
   }
 }
+
 .menu__button.active {
-    background-color: var(--background-modalcontrol);
-    color: var(--dark-text-inverse);
-    cursor: default;
-    
-      .menu__button-icon {
-        background-color: var(--dark-text-inverse);
-      }
+  background-color: var(--background-modalcontrol);
+  color: var(--dark-text-inverse);
+  cursor: default;
+
+  .menu__button-icon {
+    background-color: var(--dark-text-inverse);
+  }
 }
 
 .menu__button-icon {
@@ -410,6 +407,7 @@ h3 {
   background-color: var(--dark-border-inverse);
   transition: var(--transition);
 }
+
 .menu__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -425,6 +423,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
 .menu__show-more {
   display: none;
   align-items: center;
@@ -439,5 +438,46 @@ h3 {
 
   &.show {
     display: flex;
+  }
+}
+
+.scroll-top {
+  transform: translateY(100px) rotate(90deg);
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  right: 0;
+
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  margin: auto;
+  transition: var(--transition);
+
+  border: 1px solid var(--background-modalcontrol);
+  background-color: var(--dark-text-inverse);;
+  border-radius: 100%;
+  opacity: 1;
+
+  &.active {
+    opacity: 0.7;
+    transform: translateY(0) rotate(90deg);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    stroke: var(--dark-border-primary);
+  }
+
+  @media (max-width: 930px) {
+    width: 40px;
+    height: 40px;
   }
 }

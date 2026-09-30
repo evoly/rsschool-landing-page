@@ -5,6 +5,7 @@
         display: block;
     }
 }
+
 .modal__inner {
     display: flex;
     position: absolute;
@@ -17,11 +18,23 @@
     background-color: var(--background-modal);
     padding: 16px;
     border-radius: 40px;
+
+    @media (max-width: 930px) {
+        max-width: 688px;
+    }
+
+    @media (max-width: 740px) {
+        max-width: 310px;
+    }
 }
 
 .modal__img {
     border-radius: 40px;
     max-width: 310px;
+
+    @media (max-width: 740px) {
+        display: none;
+    }
 }
 
 .modal__content {
@@ -36,35 +49,47 @@
 .modal__header {
     margin-bottom: 12px;
 }
+
 .modal__description {
     line-height: 150%;
 }
+
 .modal__label {
     margin-bottom: 8px;
     text-transform: capitalize
 }
+
 .modal__choices {
     display: flex;
     gap: 16px;
+
+    @media (max-width: 930px) {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 }
 
 .modal__option {
     display: flex;
+    width: fit-content;
     align-items: center;
     gap: 8px;
+    color: var(--primary);
+    font-weight: 600;
+    line-height: 150%;
     background-color: transparent;
     border: 1px solid var(--dark-border-inverse);
-    color: var(--primary);
     border-radius: 40px;
     padding: 8px 14px 8px 8px;
     cursor: pointer;
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
         background-color: var(--background-modalcontrol);
 
         .modal__option-text {
             color: var(--dark-border-inverse);
-        }        
+        }
     }
 }
 
@@ -77,6 +102,7 @@
     background-color: var(--dark-border-inverse);
     text-transform: uppercase;
 }
+
 .modal__info {
     display: flex;
     gap: 12px;
@@ -84,6 +110,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
 }
+
 .modal__info-icon {
     display: block;
     flex-shrink: 0;
@@ -91,27 +118,28 @@
     height: 16px;
     line-height: 16px;
     border: 1px solid var(--primary);
-    border-radius: 100%;    
+    border-radius: 100%;
     text-align: center;
     font-size: 8px;
 }
+
 .modal__total {
     display: flex;
     justify-content: space-between;
     font-weight: 600;
-    font-size: 2.4rem; 
+    font-size: 2.4rem;
 }
 
 .modal__close {
     background-color: transparent;
-    border:1px solid var(--background-modalcontrol);
+    border: 1px solid var(--background-modalcontrol);
     border-radius: 100px;
     padding: 10px;
     cursor: pointer;
 
     &:hover {
         background-color: var(--background-modalcontrol);
-        color: var(--dark-border-inverse);        
+        color: var(--dark-border-inverse);
     }
 }
 

@@ -76,6 +76,8 @@
     justify-content: flex-end;
     gap: 40px;
 
+    
+
     @media (max-width: 1024px) {
         gap: 20px;
     }
@@ -83,6 +85,9 @@
     @media (max-width: 770px) {
         flex-direction: column;
         gap: 60px;
+        font-size: 3.2rem;
+        line-height: 150%;
+        font-weight: 600;
     }
 
 }

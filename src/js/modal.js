@@ -3,7 +3,7 @@ import cards from './menu.json';
 const createEl = (el, props = {}) => Object.assign(document.createElement(el), props);
 
 const createOptionButton = (choice, active = false) => {
-  const button = createEl('button', { className: `modal__option link-button${active ? ' active' : ''}`,type: 'button',});
+  const button = createEl('button', { className: `modal__option ${active ? ' active' : ''}`,type: 'button',});
 
   const [key, value] = choice;
   console.log(isNaN(choice[0]), typeof choice[0], choice[0]);
@@ -77,7 +77,7 @@ const rendereModal = (cardName) => {
   const totalText = createEl('span', { className: '', textContent: `Total` });
   total.append(totalText, price);
 
-  const closeButton = createEl('button', { className: 'modal__close link-button', type: 'button', textContent: 'Close'} );
+  const closeButton = createEl('button', { className: 'modal__close ', type: 'button', textContent: 'Close'} );
 
 
   const info = createEl('div', { className: 'modal__info' });
