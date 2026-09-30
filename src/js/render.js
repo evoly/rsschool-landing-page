@@ -11,7 +11,8 @@ let currentCategory = 'coffee';
 
 export const createCard = (data, modal = false) => {
     const card = createEl('div', { className: 'card' });
-    const img = createEl('img', { src: data.image, alt: 'card image', className: 'card__img' });
+    const imgDiv = createEl('div', { className: 'card__img' });
+    const img = createEl('img', { src: data.image, alt: 'card image', });
     const header = createEl('h3', { className: 'card__header' });
     const content = createEl('div', { className: 'card__content' });
     const info = createEl('div', { className: 'card__info' });
@@ -21,8 +22,9 @@ export const createCard = (data, modal = false) => {
     info.textContent = data.description
     price.textContent = `$${data.price}`
 
+    imgDiv.append(img)
     content.append(header, info, price);
-    card.append(img, content);
+    card.append(imgDiv, content);
 
     card.addEventListener('click', ({ target }) => {
         const item = target.closest('.card');
