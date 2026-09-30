@@ -4,12 +4,8 @@ const content = document.querySelector('.slider__content');
 const viewport = document.querySelector('.slider__viewport');
 const sliderControls = document.querySelectorAll('.slider__control');
 
-
-
 const sliderHandler = () => {
     const slides = [...content.querySelectorAll('.slider__item')];
-    const sliderWidth = viewport.offsetWidth;
-    // slides.forEach((slide) => slide.style.width = `${viewport.offsetWidth}px`);
 
     const firstSlideClone = slides[0].cloneNode(true);
     const lastSlideClone = slides.at(-1).cloneNode(true);
@@ -29,17 +25,15 @@ const sliderHandler = () => {
     const moveSlider = (animate = true) => { 
         const sliderWidth = viewport.offsetWidth;
 
-        content.style.transition = animate ? 'transform 0.3s ease' : 'none';
-
-        content.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
-
         [...sliderControls].forEach((control, index) => {
             control.classList.remove('active');
             if (index === currentIndex - 1) {
-                console.log('currentIndex', currentIndex)
                 control.classList.add('active');
             }
         });
+
+        content.style.transition = animate ? 'transform 0.3s ease' : 'none';
+        content.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
     };
 
     setSlideWidths();
@@ -81,7 +75,5 @@ const sliderHandler = () => {
         moveSlider(false);
     });    
 };
-
-// window.addEventListener('resize', () => slideWidthHandler());
 
 export default sliderHandler;
