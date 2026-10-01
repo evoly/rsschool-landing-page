@@ -3,6 +3,17 @@
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto;
     row-gap: 35px;
+    position: relative; 
+}
+
+.slider__viewport {
+    overflow: hidden;
+    user-select: none;
+    touch-action: none;
+}
+.slider__content{
+    display: flex;
+    width: max-content;
 }
 
 .item {
@@ -14,10 +25,12 @@
     gap: 16px;
     color: var(--primary);
     margin: 0 auto;
+    flex: 0 0 100%;
 }
 
 .item__img {
     margin-bottom: 10px;
+    pointer-events: none;
 }
 
 .item-descr {
@@ -63,7 +76,6 @@
 .slider__button_right {
     transform: rotate(180deg);
 }
-
 .slider__controls {
     display: flex;
     gap: 12px;

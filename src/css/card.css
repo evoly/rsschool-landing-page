@@ -3,11 +3,21 @@
     flex-direction: column;
     border:1px solid var(--dark-border-inverse);
     border-radius: 40px;
+
+    cursor: pointer;
 }
 .card__img {
-    max-width: 100%;
-    object-fit: contain;
     border-radius: 40px;
+    overflow: hidden;
+
+    img {
+        transition: transform 0.5s ease;
+        transform: scale(1.08);
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
 }
 
 .card__content {
