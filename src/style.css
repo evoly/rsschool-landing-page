@@ -17,6 +17,9 @@ html[data-theme="dark"] {
   --dark-text-inverse: #292826;
   --dark-border-inverse: #E1D4C9;
   --primary: #E1D4C9;
+  --background-modal:#403F3D;
+  --modal-btn-bg: #665f55;
+
   color: #E1D4C9;
 }
 

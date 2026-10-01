@@ -7,6 +7,9 @@
     --dark-text-accent: #B0907A;
     --background-modalcontrol: #665F55;
     --dark-border-inverse: #C1B6AD;
+    --background-modal: #E1D4C9;
+    --modal-btn-text:#403F3D;
+    --modal-btn-bg:#C1B6AD;
 
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 

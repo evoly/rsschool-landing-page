@@ -88,7 +88,10 @@
         background-color: var(--background-modalcontrol);
 
         .modal__option-text {
-            color: var(--dark-border-inverse);
+            color: var(--primary);
+        }
+        .modal__option-mark {
+            background-color: var(--background-modal);
         }
     }
 }
@@ -99,7 +102,7 @@
     height: 30px;
     border-radius: 100%;
     line-height: 30px;
-    background-color: var(--dark-border-inverse);
+    background-color: var(--modal-btn-bg);
     text-transform: uppercase;
 }
 
@@ -136,6 +139,7 @@
     border-radius: 100px;
     padding: 10px;
     cursor: pointer;
+    color: var(--primary);
 
     &:hover {
         background-color: var(--background-modalcontrol);
