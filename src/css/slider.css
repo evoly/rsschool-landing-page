@@ -8,6 +8,8 @@
 
 .slider__viewport {
     overflow: hidden;
+    user-select: none;
+    touch-action: none;
 }
 .slider__content{
     display: flex;
@@ -28,6 +30,7 @@
 
 .item__img {
     margin-bottom: 10px;
+    pointer-events: none;
 }
 
 .item-descr {

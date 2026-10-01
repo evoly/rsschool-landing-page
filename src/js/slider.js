@@ -70,6 +70,43 @@ const sliderHandler = () => {
         isMoving = false;
     });
 
+    let startX = 0;
+    let endX = 0;
+
+    viewport.addEventListener('pointerdown', (e) => {
+        console.log('pointerdown', e)
+        startX = e.clientX;
+        viewport.setPointerCapture(e.pointerId);
+    });
+
+    viewport.addEventListener('pointerup', (e) => {
+        console.log('pointerup', e)
+        endX = e.clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const threshold = 50;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                if (isMoving) return;
+                isMoving = true;
+                currentIndex += 1;
+
+                moveSlider();
+            } else {
+                if (isMoving) return;
+                isMoving = true;
+                currentIndex -= 1;
+
+                moveSlider();
+            }
+        }
+    }
+
+
     window.addEventListener('resize', () => {
         setSlideWidths();
         moveSlider(false);
